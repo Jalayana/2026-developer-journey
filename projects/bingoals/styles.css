@@ -1,8 +1,73 @@
 body {
   text-align: center;
   padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+button {
+  font-size: 24px;
+  background-color: #ffb347;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.dashboard {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.card {
+  width: 400px;
+
+  border: 5px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 50px auto 0;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.progress-card {
+  background-color: #89cff0;
+}
+
+.reward-card {
+  background-color: #93c83e;
+}
+
+.goal-card {
+  background-color: #f46fa1;
+}
+
+.category-card {
+  background-color: #ad5691;
+}
+
+.info-card {
+  background-color: rgba(255, 255, 255, 0.784);
+  width: 350px;
+  max-width: 100%;
+  padding: 0 50px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
