@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 72px;
 }
 
 button {
@@ -21,9 +21,13 @@ button {
   width: 1000px;
   max-width: 100%;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.progress-card,
+.category-card {
+  grid-column: span 2;
 }
 
 ul {
@@ -70,4 +74,15 @@ li {
   border-radius: 25px;
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+@media (max-width: 920px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-card,
+  .category-card {
+    grid-column: span 1;
+  }
 }
