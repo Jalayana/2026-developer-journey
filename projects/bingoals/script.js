@@ -56,3 +56,33 @@ completedGoalsElement.textContent = `${result} of ${goals.length} goals complete
 const progressBarElement = document.querySelector("#completed-goals-progress");
 
 progressBarElement.value = result;
+
+function getGoalStats(goals) {
+  const stats = {
+    completed: 0,
+    inProgress: 0,
+    notStarted: 0,
+  };
+
+  for (let i = 0; i < goals.length; i++) {
+    if (goals[i].status === "completed") {
+      stats.completed++;
+    } else if (goals[i].status === "in-progress") {
+      stats.inProgress++;
+    } else {
+      stats.notStarted++;
+    }
+  }
+  return stats;
+}
+
+const stats = getGoalStats(goals);
+
+const completedCountElement = document.querySelector("#completed-count");
+completedCountElement.textContent = stats.completed;
+
+const inProgressCountElement = document.querySelector("#in-progress-count");
+inProgressCountElement.textContent = stats.inProgress;
+
+const notStartedCountElement = document.querySelector("#not-started-count");
+notStartedCountElement.textContent = stats.notStarted;
