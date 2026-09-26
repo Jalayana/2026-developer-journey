@@ -2,7 +2,7 @@
 
 > Restarting regular learning notes. Previous learning from the past two months was not documented, but progress is reflected in projects, commits, and completed challenges.
 
-## What I worked on
+What I worked on
 
 ### BINGoals
 
