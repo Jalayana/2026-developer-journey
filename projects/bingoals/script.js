@@ -86,3 +86,26 @@ inProgressCountElement.textContent = stats.inProgress;
 
 const notStartedCountElement = document.querySelector("#not-started-count");
 notStartedCountElement.textContent = stats.notStarted;
+
+//Creates an individual bingo square
+function createBingoSquare(goal) {
+  const bingoSquare = document.createElement("div");
+  bingoSquare.className = "bingo-square";
+
+  const goalText = document.createElement("p");
+  goalText.textContent = goal.name;
+
+  bingoSquare.append(goalText);
+
+  return bingoSquare;
+}
+
+function createBingoCard(goals) {
+  const bingoCardElement = document.querySelector(".bingo-card");
+
+  for (let i = 0; i < goals.length; i++) {
+    bingoCardElement.append(createBingoSquare(goals[i]));
+  }
+}
+createBingoCard(goals);
+console.log("createBingoCard was called");
